@@ -49,7 +49,7 @@ while(true){
         $segundo_numero = readline();
     }
 
-    if ($primeiro_numero == 666 || $operador != 'exit' || $segundo_numero != 666){
+    if ($primeiro_numero == 666 || $operador == 'exit' || $segundo_numero == 666){
         break;
     }
 
