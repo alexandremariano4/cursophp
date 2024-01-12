@@ -1,7 +1,7 @@
 <?php 
 
 
-function operacao($num1,$op,$num2):mixed{
+function operacao(float $num1, string $op, float $num2):mixed{
 
     if ($op == "+"){
         return $num1 + $num2;
