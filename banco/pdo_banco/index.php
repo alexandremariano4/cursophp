@@ -2,6 +2,7 @@
     date_default_timezone_set('America/Sao_Paulo');
 
     $pdo = new PDO('mysql:host=localhost;dbname=banco','root','');
+    $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 
     if(isset($_POST['acao'])){
     
@@ -10,9 +11,13 @@
         $momento_registro = date('Y-m-d H:i:s');
 
 
-        $sql = $pdo->prepare("INSERT INTO `clientes` VALUES (null,?,?,?) ");
+        $sql = $pdo->prepare("INSERT INTO `clientes` VALUES (/*id*/null,/*nome*/?,/*sobrenome*/?,/*momento_registro*/?) ");
         
-        $sql->execute(array($nome,$sobrenome,$momento_registro));
+        $sql->execute(array(
+            $nome,
+            $sobrenome,
+            $momento_registro)
+        );
         
         echo 'Cliente cadastrado com sucesso!'.'<br>';
 
@@ -27,13 +32,7 @@
             echo "momento_registro: ". $clientes['momento_registro']."<br>";
             echo "<hr>";
         }
-        
-        $sql->execute();
     }
-    
-
-
-
 ?>
 
 <!DOCTYPE html>
@@ -45,8 +44,8 @@
 </head>
 <body>
     <form method="post">
-        <input type="text" name="nome" required>
-        <input type="text" name="sobrenome" required>
+        Nome*: <input type="text" name="nome" required>
+        Sobrenome*: <input type="text" name="sobrenome" required>
         <input type="submit" name="acao" value="Enviar!">
     </form>
 </body>
