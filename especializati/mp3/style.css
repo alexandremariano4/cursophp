@@ -1,0 +1,12 @@
+.img-album{
+    max-width: 100%;
+}
+.album{
+    margin: 10px 0 ;
+}
+a{
+    text-decoration: none;
+}
+.player-audio{
+    padding: 5px;
+}

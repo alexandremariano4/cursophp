@@ -1,3 +1,3 @@
 <?php
 
-echo($_COOKIE['cookieTeste']);
+//echo($_COOKIE['cookieTeste']);
