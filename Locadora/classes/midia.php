@@ -2,8 +2,9 @@
 include('conteudo.php');
 class Midia extends Conteudo
 {
-    private $tipoMidia;
-
+    public $tipoMidia;
+    public $nomeConteudo;
+    public $tipoConteudo;
 
     public function __construct(
         string $nomeConteudo,
@@ -21,7 +22,9 @@ class Midia extends Conteudo
         }
         $this->tipoMidia = $tipoMidia;
         parent::setContent($nomeConteudo);
+        $this->nomeConteudo = $nomeConteudo;
         parent::setTipoConteudo($tipoConteudo);
+        $this->tipoConteudo = $tipoConteudo;
     }
 
 }

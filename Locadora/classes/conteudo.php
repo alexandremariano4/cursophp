@@ -2,8 +2,8 @@
 
 class Conteudo
 {
-    private $nomeConteudo;
-    private $tipoConteudo;
+    public $nomeConteudo;
+    public $tipoConteudo;
     public function setContent(string $nomeConteudo) : void{
         $this->nomeConteudo = $nomeConteudo;
     }

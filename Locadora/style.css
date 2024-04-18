@@ -4,15 +4,48 @@
 }
 .container{
     width: 100%;
-    background-color: #424e50;
+    background-color: #535353;
     padding: 20px;
     padding-top: 10px;
     border-radius: 30px;
 }
 h1{
-    text-align: center;
+    color: white;
+}
+.texto{
+    font-style: normal;
+    padding-top: 20px;
+    display: block;
+    width: 100%;
+    color: white;
+}
+span.text-center{
+    font-style: normal;
+    font-weight: bold;
+    font-size: 20px;
+    padding-top: 20px;
+    display: block;
+    width: 100%;
     color: white;
 }
 .content{
     padding: 20px;
 }
+
+body{
+    background-color: #424e50;
+}
+.retry input.form-control::placeholder{
+    color:red;
+}
+.retry input.form-control{
+    border-color: red;
+    border: 1px solid red;
+}
+.retry select.form-control{
+    color:red;
+}
+.retry select.form-control{
+     border-color: red;
+     border: 1px solid red;
+ }
