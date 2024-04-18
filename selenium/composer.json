@@ -1,0 +1,14 @@
+{
+    "name": "alexandre/selenium-test",
+    "type": "project",
+    "require": {
+        "php-webdriver/webdriver": "^1.1"
+    },
+    "authors": [
+        {
+            "name": "Alexandre",
+            "email": "alexandre_mariano@hotmail.com.br"
+        }
+    ],
+    "minimum-stability": "stable"
+}
